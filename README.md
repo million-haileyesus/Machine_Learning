@@ -1,1 +1,1 @@
-Hello, this is machine learning course notes.
+Hello, this is machine learning course note.

@@ -15,7 +15,8 @@ Cost function or Squared error cost function: (y_hat - y) = error
 
 GRADIENT DESCENT ALGORITHM
 
-= is assignment and d is derivative.
+"=" is assignment and d is derivative.
+alpha is a learning rate, which is always positive
 
 w = w - alpha * (d/dw) * J(w,b) // What this does is it updates parameter w by a small amount, 
 b = b - alpha * (d/db) * J(w,b) // in order to reduce the cost J.
@@ -29,3 +30,14 @@ w = temp_w
 b = temp_b
 
 We repeat the assignment of w and b until the algorithm converges, meaning the local min where the parameters w and b doesn't change much after each iteration.
+
+
+If we have a parbolic graph of J(w), with J(w) as the y-axis and w as the
+x-axis. If there is a point on the parbolic graph.
+
+We would draw a tangent line or a straight line that touches the point and
+The slope of that line is the derivative of the function J at that point.
+To find the slope we use rise over ran.
+
+This works the same with a negative slope also as we are getting close to
+zero

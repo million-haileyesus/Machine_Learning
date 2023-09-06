@@ -10,3 +10,22 @@ Cost function or Squared error cost function: (y_hat - y) = error
 				m = number of training examples
 
 			If we don't want get bigger as the training size gets bigger we divided it by m to get the average. 
+
+
+
+GRADIENT DESCENT ALGORITHM
+
+= is assignment and d is derivative.
+
+w = w - alpha * (d/dw) * J(w,b) // What this does is it updates parameter w by a small amount, 
+b = b - alpha * (d/db) * J(w,b) // in order to reduce the cost J.
+
+We are simultaneously updating w and b.
+
+temp_w = w - alpha * (d/dw) * J(w,b)
+temp_b = b - alpha * (d/db) * J(w,b)
+
+w = temp_w
+b = temp_b
+
+We repeat the assignment of w and b until the algorithm converges, meaning the local min where the parameters w and b doesn't change much after each iteration.

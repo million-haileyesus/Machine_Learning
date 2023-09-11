@@ -6,3 +6,35 @@ X(is a vector, with an arrow) = [x1, x2, ... , xn]
 
 f(w,b)(x) = W *(dot product) X + b => multiple linear regression
 
+
+
+Numpy python package methods:
+
+w = np.array([1,2,3]) => to put numbers in an array
+x = np.array([0,45,2]) => to put numbers in an array
+
+f = np.dot(w,x) + b => to compute the dot product of vectors
+
+
+
+Vector notation for gradient descent
+
+f(W,b)(X) = W *(dot product) X + b
+
+Gradient descent
+
+for loop {
+	w = w - alpha (d/dw) J(W,b)
+	b = b - alpha (d/db) J(W,b)
+}
+
+or 
+
+for loop {
+	w of (1) = w of (1) - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i)) * x of (i) => J = 1
+	...
+	w of (n) = w of (n) - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i)) * x of (i) => J = n
+
+	b = b - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i))
+}
+

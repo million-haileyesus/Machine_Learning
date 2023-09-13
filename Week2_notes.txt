@@ -51,6 +51,16 @@ Example:- -100 < x < 100 => rescale it to -1 < x < 1
 
 
 
+Checking gradient descent for convergence
+
+Making sure graident descent is working correctly means the J(W,b) is being minimized
+after each iteration. When the gradient descent converges it means the curve of the
+J(W,b) is almost flat and cannot take a noticable decrease in the graph. This method
+is one way to check when our model is done training.
+
+Another way is to use Automatic convergence test. Let epsilon(e) be 0.001, if J(W,b)
+decreases by <= e in one iteration, then declare convergence (found parameter W,b to
+get close to global minimum).
 
 
 

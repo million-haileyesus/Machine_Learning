@@ -38,3 +38,21 @@ for loop {
 	b = b - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i))
 }
 
+
+
+Feature Scaling
+
+To rescale large or small number, we divide each values by the max value for that 
+feature.
+
+Example:- -0.00001 < x < 0.001 => rescale it to -0.01 < x < 1
+
+Example:- -100 < x < 100 => rescale it to -1 < x < 1
+
+
+
+
+
+
+
+

@@ -71,3 +71,20 @@ decrease and don't have a bug in the code, try alpha with smaller number,
 which would decrease J(W,b) and if it doesn't that means there is a bug 
 in your code. 
 
+
+
+Feature engineering
+
+f(W,b)(X) = w1x1 + w2x2 + b
+area = x1 * x2
+x3 = x1 * x2
+
+New feature
+
+f(W,b)(X) = w1x1 + w2x2 + w3x3 + b
+
+Feature engineering:- using intuition to design new features, by 
+transforming or combining original features.
+
+
+

@@ -1,0 +1,11 @@
+:match Underlined /Logistic regression\|Logistic regression/
+
+f(W,b)(X) = W dot product X + b
+
+z = W dot product X + b
+
+
+g(z) = 1 / (1 + e ^ (-z))
+
+
+f(W,b)(X) = g(W dot product X + b) = 1 / (1 + e ^ (-(W dot product X + b)))

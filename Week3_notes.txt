@@ -9,3 +9,19 @@ g(z) = 1 / (1 + e ^ (-z))
 
 
 f(W,b)(X) = g(W dot product X + b) = 1 / (1 + e ^ (-(W dot product X + b)))
+
+
+
+Decision boundary
+
+f(W,b)(X) = W dot product X + b
+
+z = W dot product X + b
+
+
+g(z) = 1 / (1 + e ^ (-z))
+
+
+Non-linear decision boundaries
+
+g(z) = g(w1x1^(2) + w2x2^(2) + b) => The graph for this would be a circle

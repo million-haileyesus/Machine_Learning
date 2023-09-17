@@ -1,4 +1,4 @@
-:match Underlined /Logistic regression\|Logistic regression/
+Logistic regression
 
 f(W,b)(X) = W dot product X + b
 

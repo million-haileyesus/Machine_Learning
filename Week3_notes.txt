@@ -25,3 +25,21 @@ g(z) = 1 / (1 + e ^ (-z))
 Non-linear decision boundaries
 
 g(z) = g(w1x1^(2) + w2x2^(2) + b) => The graph for this would be a circle
+
+
+
+Cost function for logistic regression
+
+Linear regression:
+	f(W,b(X)) = W * X + b
+
+Squared error cost: The only difference is the 1/2 is put inside the summation
+	J(W,b) = 1/m(summation from i = 1, to m (1/2(f(W,b(X of (i)) - y of (i))^2)
+	 
+Logistic loss function:
+	L(f(W,b(X of (i), y of (i))) = { -log(f(W,b(X of (i))))		if y of (i) = 1
+				       { -log(1 - f(W,b(X of (i))))	if y of (i) = 0
+
+Loss is lowest when f(W,b(X of (i))) predicts close to true label y of (i). for y of (i) = 1
+
+The further prediction f(W,b(X of (i))) is from target y of (i), the higher the loss. for y of (i) = 0

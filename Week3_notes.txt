@@ -43,3 +43,13 @@ Logistic loss function:
 Loss is lowest when f(W,b(X of (i))) predicts close to true label y of (i). for y of (i) = 1
 
 The further prediction f(W,b(X of (i))) is from target y of (i), the higher the loss. for y of (i) = 0
+
+
+
+Simplified Cost Function for Logistic Regression
+
+L(f(W,b(X of (i), y of (i))) = -y of (i) * log(f(W,b(X of (i)))) - (1 - y of (i)) * log(f(W,b(X of (i)))) => y can be 0 or 1
+
+J(W,b) = 1/m(summation from i = 1, to m (L(f(W,b(X of (i), y of (i))))^2)
+       = -1/m(summation from i = 1, to m (y of (i) * log(f(W,b(X of (i)))) + (1 - y of (i)) * log(f(W,b(X of (i)))))^2)
+

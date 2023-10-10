@@ -1,4 +1,4 @@
-f(x) = m*x + b
+$$f(x) = m * x + b$$
 f(x) is y, x is x, m is the slope and b is the y-intercept.
 
 To find the slope using the graph you calculate rise divided by run.
@@ -24,8 +24,8 @@ b = b - alpha * (d/db) * J(w,b) // in order to reduce the cost J.
 
 We are simultaneously updating w and b.
 
-temp_w = w - alpha * (d/dw) * J(w,b)
-temp_b = b - alpha * (d/db) * J(w,b)
+$$temp_w = w - &alpha; * \frac{d}{dw} * J(w,b)$$
+$$temp_b = b - &alpha; * \frac{d}{dw} * J(w,b)$$
 
 w = temp_w
 b = temp_b
@@ -53,7 +53,8 @@ the minimum after each iteration or fail to converage or diverage.
 If gradient descent is at a local min, it would stay at a local min not 
 matter the size of the alpha.
 
-Linear regression model => f(w,b)(x) = w * x + b
+Linear regression model 
+$$f(w,b)(x) = w * x + b$$
 
 Gradient descent => both derived
 

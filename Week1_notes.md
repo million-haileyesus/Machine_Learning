@@ -58,9 +58,9 @@ $$f(w,b)(x) = w * x + b$$
 
 Gradient descent => both derived
 
-$$w = w - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_{i}) - y_{i}) * x_{i})$$
+$$w = w - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_i) - y_i) * x_i)$$
 
-$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(w,b)(x_{i}) - y_{i}))$$
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(w,b)(x_i) - y_i))$$
 
 Square error cost has only one global local minimum
 

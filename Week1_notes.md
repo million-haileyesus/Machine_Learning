@@ -55,7 +55,7 @@ matter the size of the alpha.
 Linear regression model => f(w,b)(x) = wx + b
 
 Gradient descent => 
-$$w = w - &alpha * (1/m * sum from i = 1, to m (f(w,b)(x of (i)) - y of (i)) * x of (i)$$ => derived
+$$w = w - &alpha; * (1/m * sum from i = 1, to m (f(w,b)(x of (i)) - y of (i)) * x of (i)$$ => derived
 b = b - alpha * (1/m * sum from i = 1, to m (f(w,b)(x of (i)) - y of (i)) => derived
 
 Square error cost has only one global local minimum

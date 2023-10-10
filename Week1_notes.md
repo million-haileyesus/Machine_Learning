@@ -9,7 +9,8 @@ Cost function or Squared error cost function: (y_hat - y) = error
 				sum from i = 1 to m ((y_hat(i) - y(i))^2) => Total square error
 				m = number of training examples
 
-If we don't want to get bigger as the training size gets bigger we divided it by m to get the average. 
+If we don't want our cost function to get bigger as our training size gets bigger, we should divided
+our summation by m, which would get us the average.
 
 
 
@@ -56,8 +57,8 @@ Linear regression model => f(w,b)(x) = wx + b
 
 Gradient descent => both derived
 
-$$w = w - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x<sub>i<sub>) - y<sub>i<sub>) * x<sub>i<sub>)$$
-$$b = b - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x<sub>i<sub>) - y of (<sub>i<sub>))$$
+$$w = w - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x<sub>i</sub>) - y<sub>i</sub>) * x<sub>i</sub>)$$
+$$b = b - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x<sub>i</sub>) - y of (<sub>i</sub>))$$
 
 Square error cost has only one global local minimum
 

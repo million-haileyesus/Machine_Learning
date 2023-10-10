@@ -9,7 +9,7 @@ Cost function or Squared error cost function: (y_hat - y) = error
 				sum from i = 1 to m ((y_hat(i) - y(i))^2) => Total square error
 				m = number of training examples
 
-			If we don't want get bigger as the training size gets bigger we divided it by m to get the average. 
+If we don't want to get bigger as the training size gets bigger we divided it by m to get the average. 
 
 
 

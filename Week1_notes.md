@@ -56,8 +56,8 @@ Linear regression model => f(w,b)(x) = wx + b
 
 Gradient descent => both derived
 
-$$w = w - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x of (i)) - y of (i)) * x of (i)$$
-$$b = b - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x of (i)) - y of (i))$$
+$$w = w - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x<sub>i<sub>) - y<sub>i<sub>) * x<sub>i<sub>)$$
+$$b = b - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x<sub>i<sub>) - y of (<sub>i<sub>))$$
 
 Square error cost has only one global local minimum
 

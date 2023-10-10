@@ -53,13 +53,13 @@ the minimum after each iteration or fail to converage or diverage.
 If gradient descent is at a local min, it would stay at a local min not 
 matter the size of the alpha.
 
-Linear regression model => f(w,b)(x) = wx + b
+Linear regression model => f(w,b)(x) = w * x + b
 
 Gradient descent => both derived
 
-$$w = w - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x_{n}) - y_{n}) * x_{n})$$
+$$w = w - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_{i}) - y_{i}) * x_{i})$$
 
-$$b = b - &alpha; * (1/m * \sum_{i = 1}^m (f(w,b)(x_{n}) - y_{n}))$$
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(w,b)(x_{i}) - y_{i}))$$
 
 Square error cost has only one global local minimum
 

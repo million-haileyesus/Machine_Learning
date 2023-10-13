@@ -24,8 +24,8 @@ b = b - alpha * (d/db) * J(w,b) // in order to reduce the cost J.
 
 We are simultaneously updating w and b.
 
-$$temp_w = w - &alpha; * \frac{d}{dw} * J(w,b)$$
-$$temp_b = b - &alpha; * \frac{d}{dw} * J(w,b)$$
+$$temp_w = w - &alpha; * \frac{dJ(w,b)}{dw}$$
+$$temp_b = b - &alpha; * \frac{dJ(w,b)}{dw}$$
 
 w = temp_w
 b = temp_b

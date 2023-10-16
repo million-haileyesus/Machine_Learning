@@ -68,14 +68,25 @@ repeat {
   $$b = b - &alpha; * \frac{\partial}{\partial b} J(W, b)$$
 }
 
-$$\frac{\partial}{\partial w_{j}} J(W, b) = \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i}) * x_{j}^{i}$$
-$$\frac{\partial}{\partial b} J(W, b) = \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i})$$
+$$\frac{\partial}{\partial w_{j}} J(W, b) = \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i}) * x_{j}^{i}$$
+$$\frac{\partial}{\partial b} J(W, b) = \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i})$$
 
 repeat {
-  $$w_{j} = w_{j} - &alpha; * \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i}) * x_{j}^{i}$$
-  $$b = b - &alpha; * \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i})$$
+  $$w_{j} = w_{j} - &alpha; * \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i}) * x_{j}^{i}$$
+  $$b = b - &alpha; * \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i})$$
 }
 
 We can monitor logistic logistic regression to converge as we do for gradient descent.
 
+
+
+The problem of overfitting
+
+Regression example 
+
+=> When the curve/s has less features it wouldn't fit the training set well it is called underfitting, which is also called high bias.
+
+=> When the curves has many features it wouldn't fit the training set extremely well it is called overfitting, which is also called high variance.
+
+Generalization is when we generlize a good feature or curve to fit the training set.
 

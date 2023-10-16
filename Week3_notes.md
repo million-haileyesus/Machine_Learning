@@ -68,12 +68,12 @@ repeat {
   $$b = b - &alpha; * \frac{\partial}{\partial b} J(W, b)$$
 }
 
-$$\frac{\partial}{\partial w_{j}} J(W, b) = \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i}) * x_{j}^{i}$$
-$$\frac{\partial}{\partial b} J(W, b) = \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i})$$
+$$\frac{\partial}{\partial w_{j}} J(W, b) = \frac{1}{m} * \sum_{i = 1}^{m} (f_{(W,b)} (X^{i}) - y^{i}) * x_{j}^{i}$$
+$$\frac{\partial}{\partial b} J(W, b) = \frac{1}{m} * \sum_{i = 1}^{m} (f_{(W,b)} (X^{i}) - y^{i})$$
 
 repeat {
-  $$w_{j} = w_{j} - &alpha; * \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i}) * x_{j}^{i}$$
-  $$b = b - &alpha; * \frac{1}{m} * \sum_{i = 1}^{m} (f_{W,b} (X^{i}) - y^{i})$$
+  $$w_{j} = w_{j} - &alpha; * \frac{1}{m} * \sum_{i = 1}^{m} (f_{(W,b)} (X^{i}) - y^{i}) * x_{j}^{i}$$
+  $$b = b - &alpha; * \frac{1}{m} * \sum_{i = 1}^{m} (f_{(W,b)} (X^{i}) - y^{i})$$
 }
 
 We can monitor logistic logistic regression to converge as we do for gradient descent.

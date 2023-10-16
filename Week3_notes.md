@@ -53,3 +53,29 @@ L(f(W,b(X of (i), y of (i))) = -y of (i) * log(f(W,b(X of (i)))) - (1 - y of (i)
 J(W,b) = 1/m(summation from i = 1, to m (L(f(W,b(X of (i), y of (i))))^2)
        = -1/m(summation from i = 1, to m (y of (i) * log(f(W,b(X of (i)))) + (1 - y of (i)) * log(f(W,b(X of (i)))))^2)
 
+
+
+Gradient Descent Implementation
+
+Cost function
+
+$$J(W,b) =  = -1/m(summation from i = 1, to m (y of (i) * log(f(W,b(X of (i)))) + (1 - y of (i)) * log(f(W,b(X of (i)))))^2)$$
+
+Gradient descent
+
+repeat {
+  $$w_{j} = w_{j} - &alpha; * \frac{\partial}{\partial w_{j}} J(W, b)$$
+  $$b = b - &alpha; * \frac{\partial}{\partial b} J(W, b)$$
+}
+
+$$\frac{\partial}{\partial w_{j}} J(W, b) = \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i}) * x_{j}^{i}$$
+$$\frac{\partial}{\partial b} J(W, b) = \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i})$$
+
+repeat {
+  $$w_{j} = w_{j} - &alpha; * \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i}) * x_{j}^{i}$$
+  $$b = b - &alpha; * \frac{1}{m} * \sum{i = 1}^{m} (f_{W,b} (X^{i}) - y{i})$$
+}
+
+We can monitor logistic logistic regression to converge as we do for gradient descent.
+
+

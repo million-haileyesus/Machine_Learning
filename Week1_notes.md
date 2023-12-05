@@ -19,8 +19,12 @@ GRADIENT DESCENT ALGORITHM
 "=" is assignment and d is derivative.
 alpha is a learning rate, which is always positive
 
-w = w - alpha * (d/dw) * J(w,b) // What this does is it updates parameter w by a small amount, 
-b = b - alpha * (d/db) * J(w,b) // in order to reduce the cost J.
+What this does is it updates parameter w by a small amount in order to reduce the cost J.
+$$w = w - &alpha; * \frac{d}{dw} J(w,b)$$
+
+$$b = b - &alpha; * \frac{d}{db} J(w,b)$$
+
+
 
 We are simultaneously updating w and b.
 

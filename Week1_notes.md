@@ -24,11 +24,13 @@ b = b - alpha * (d/db) * J(w,b) // in order to reduce the cost J.
 
 We are simultaneously updating w and b.
 
-$$temp_w = w - &alpha; * \frac{\partial}{\partial w} J(w,b)$$
-$$temp_b = b - &alpha; * \frac{\partial}{\partial b} J(w,b)$$
+$$w_{temp} = w - &alpha; * \frac{\partial}{\partial w} J(w,b)$$
 
-w = temp_w
-b = temp_b
+$$b_{temp} = b - &alpha; * \frac{\partial}{\partial b} J(w,b)$$
+
+$$w = w_{temp}$$
+
+$$b = wb{temp}$$
 
 We repeat the assignment of w and b until the algorithm converges, meaning the local 
 min where the parameters w and b doesn't change much after each iteration.

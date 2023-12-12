@@ -7,12 +7,14 @@ To find the slope using the graph you calculate rise divided by run.
 
 Cost function or Squared error cost function: 
 y-hat is for the slop and y is for the error from the slope.
-				Error: 
+
+Cost function or Error: 
 
 $$\overline{y} - y$$
 
-Total square error or sum of square error
-m = number of training examples
+Total square error or sum of square error and m is number of training examples
+
+Loss function:
 
 $$\sum_{i = 1}^m (\overline{y} - y)^{2}$$
 

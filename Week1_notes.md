@@ -34,7 +34,7 @@ $$b_{temp} = b - &alpha; * \frac{\partial}{\partial b} J(w,b)$$
 
 $$w = w_{temp}$$
 
-$$b = wb{temp}$$
+$$b = b_{temp}$$
 
 We repeat the assignment of w and b until the algorithm converges, meaning the local 
 min where the parameters w and b doesn't change much after each iteration.

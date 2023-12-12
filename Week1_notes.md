@@ -5,9 +5,18 @@ To find the slope using the graph you calculate rise divided by run.
 
 
 
-Cost function or Squared error cost function: (y_hat - y) = error
-				sum from i = 1 to m ((y_hat(i) - y(i))^2) => Total square error
-				m = number of training examples
+Cost function or Squared error cost function: 
+y-hat is for the slop and y is for the error from the slope.
+				Error: 
+
+$$\overline{y} - y$$
+
+Total square error or sum of square error
+m = number of training examples
+
+$$\sum_{i = 1}^m (\overline{y} - y)^{2}$$
+
+    
 
 If we don't want our cost function to get bigger as our training size gets bigger, we should divided
 our summation by m, which would get us the average.

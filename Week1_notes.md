@@ -6,7 +6,7 @@ To find the slope using the graph you calculate rise divided by run.
 
 
 Cost function or Squared error cost function: 
-y-hat is for the slop and y is for the error from the slope.
+y-hat is for the slope and y is for the error from the slope.
 
 Cost function or Error: 
 

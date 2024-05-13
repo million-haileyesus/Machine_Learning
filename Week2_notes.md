@@ -1,15 +1,16 @@
 # Multiple features (variables)
 
-f(w,b)(x) = w1x1 + w2x2 + ... + wnxn + b
-W(is a vector, with an arrow) = [w1, w2, ... , wn]
-X(is a vector, with an arrow) = [x1, x2, ... , xn]
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}X_{2} + \cdots + W_{n}X_{n} + b$$
 
-f(w,b)(x) = W *(dot product) X + b => multiple linear regression
+W(is a vector) = [w1, w2, ... , wn]
+X(is a vector) = [x1, x2, ... , xn]
+
+$$f(W,b)(X) = W \cdot X + b$$ => multiple linear regression
 
 
 # Vector notation for gradient descent
 
-f(W,b)(X) = W *(dot product) X + b
+$$f(W,b)(X) = W \cdot X + b$$
 
 Gradient descent
 
@@ -61,13 +62,15 @@ in your code.
 
 # Feature engineering
 
-f(W,b)(X) = w1x1 + w2x2 + b
-area = x1 * x2
-x3 = x1 * x2
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}X_{2} + b$$
+
+$$Area = X_{1} * X_{2}$$
+
+$$X_{3} = X_{1} * X_{2}$$
 
 New feature
 
-f(W,b)(X) = w1x1 + w2x2 + w3x3 + b
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}X_{2} + W_{3}X_{3} + b$$
 
 Feature engineering:- using intuition to design new features, by 
 transforming or combining original features.
@@ -78,6 +81,6 @@ transforming or combining original features.
 If a curve fits the data model rather than a straight line, we 
 could use a quadratic or cubic lines.
 
-f(W,b)(X) = w1x1 + w2(x2)^2 + b
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}(X_{2})^2 + b$$
 or
-f(W,b)(X) = w1x1 + w2(x2)^2 + w3(x3)^3 + b
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}(X_{2})^2 + W_{3}(X_{3})^3 + b$$

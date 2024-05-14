@@ -15,18 +15,21 @@ $$f(W,b)(X) = W \cdot X + b$$
 Gradient descent
 
 for loop {
-	w = w - alpha (d/dw) J(W,b)
-	b = b - alpha (d/db) J(W,b)
+$$w = w - &alpha; * \frac{d}{dw} J(w,b)$$
+
+$$b = b - &alpha; * \frac{d}{db} J(w,b)$$
 }
 
 or 
 
 for loop {
-	w of (1) = w of (1) - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i)) * x of (i) => J = 1
-	...
-	w of (n) = w of (n) - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i)) * x of (i) => J = n
+$$w_1 = w_1 - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_i) - y_i) * x_i) => J = 1$$
 
-	b = b - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i))
+$$\cdots$$
+
+$$w_n = w_n - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_i) - y_i) * x_i) => J = n$$
+
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(w,b)(x_i) - y_i))$$
 }
 
 

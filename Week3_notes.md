@@ -95,70 +95,68 @@ There are 3 ways to address overfitting:
 
 # Cost Function with Regularization
 
-$$\min_{W, b}[J(W, b)] = \min_{W, b}\left[\frac{1}{2m} \cdot \sum_{i = 1}^{m} (f_{(W,b)} (X^{(i)}) - y^{(i)})^2 + \left(\frac{\lambda}{2m}\right) \cdot \sum_{j = 1}^{n} (w_{j})^2\right]$$
+$$\min_{W, b}[J(W, b)] = \min_{W, b}\left[\frac{1}{2m} \cdot \sum_{i = 1}^{m} (f_{(W,b)} (X_{i}) - y_{i})^2 + \left(\frac{\lambda}{2m}\right) \cdot \sum_{j = 1}^{n} (w_{j})^2\right]$$
 
-The $\frac{\lambda}{2m} \cdot (\sum_{j = 1}^{n} (w_{j})^2)$ is the regularization term
-
-lambda is a regularization parameter where it is greater 0.
+The $\frac{\lambda}{2m} \cdot \left( \sum_{j = 1}^{n} w_{j}^2 \right)$ is the regularization term, where lambda is a regularization parameter where it is greater 0.
 
 If lambda is zero the model would overfit and if it is a large number it will underfit. If lambda increases the size of parameters w1, w2, wn wil decrease.
 
 
 # Regularized Linear Regression
 
-$$\min_{W, b}[J(W, b)] = \min_{W, b}\left[\frac{1}{2m} \cdot \sum_{i = 1}^{m} (f_{(W,b)} (X^{(i)}) - y^{(i)})^2 + \left(\frac{\lambda}{2m}\right) \cdot \sum_{j = 1}^{n} (w_{j})^2\right]$$
-
+$$\min_{W, b}[J(W, b)] = \min_{W, b}\left[\frac{1}{2m} \cdot \sum_{i = 1}^{m} (f_{(W,b)} (X_{i}) - y_{i})^2 + \left(\frac{\lambda}{2m}\right) \cdot \sum_{j = 1}^{n} (w_{j})^2\right]$$
 
 Gradient descent
 
 for loop {
-$$w = w - \alpha \cdot \frac{d}{dw} J(w,b)$$
+$$w = w - &alpha; * \frac{d}{dw} J(w,b)$$
 
-$$b = b - \alpha \cdot \frac{d}{db} J(w,b)$$
+$$b = b - &alpha; * \frac{d}{db} J(w,b)$$
 }
 
 Changed to the following below for gradient descent
 
 for loop {
-$$w = w_j - \alpha \cdot \left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i) \cdot X_j\right)$$
+$$w = w_j - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(W,b)(X_i) - y_i) * X_j)$$
 
-$$b = b - \alpha \cdot \left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i)\right)$$
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(W,b)(X_i) - y_i))$$
 }
-
 
 Now with regularization it changes to 
 for loop {
 $$w = w_j - \alpha \cdot \left[\left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i) \cdot X_j\right) + \left(\frac{\lambda}{m}\right) \cdot w_{j}\right]$$
 
-$$b = b - \alpha \cdot \left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i)\right)$$
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(W,b)(X_i) - y_i))$$
 }
 
 
 # Regularized Logistic Regression
 
-$$J(W, b) = -\frac{1}{m} \left( \sum_{i = 1}^{m} \left( y^{(i)} \cdot \log(f(W,b(X^{(i)}))) + (1 - y^{(i)}) \cdot \log(f(W,b(X^{(i)}))) \right)^2 \right) + \left(\frac{\lambda}{2m}\right) \cdot \sum_{j = 1}^{n} (w_{j})^2$$
+$$J(W, b) = -\frac{1}{m} \left( \sum_{i = 1}^{m} \left( y_{i} \cdot \log(f(W,b(X_{i}))) + (1 - y_{i}) \cdot \log(f(W,b(X_{i}))) \right)^2 \right) + \left(\frac{\lambda}{2m}\right) \cdot \sum_{j = 1}^{n} (w_{j})^2$$
 
 Gradient descent
 
 for loop {
-$$w = w - \alpha \cdot \frac{d}{dw} J(w,b)$$
+$$w = w - &alpha; * \frac{d}{dw} J(w,b)$$
 
-$$b = b - \alpha \cdot \frac{d}{db} J(w,b)$$
+$$b = b - &alpha; * \frac{d}{db} J(w,b)$$
 }
 
 Changed to the following below for gradient descent
 
 for loop {
-$$w = w_j - \alpha \cdot \left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i) \cdot X_j\right)$$
+$$w = w_j - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(W,b)(X_i) - y_i) * X_j)$$
 
-$$b = b - \alpha \cdot \left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i)\right)$$
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(W,b)(X_i) - y_i))$$
 }
 
 Now with regularization it changes to 
 for loop {
 $$w = w_j - \alpha \cdot \left[\left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i) \cdot X_j\right) + \left(\frac{\lambda}{m}\right) \cdot w_{j}\right]$$
 
-$$b = b - \alpha \cdot \left(\frac{1}{m} \cdot \sum_{i = 1}^m (f(W,b)(X_i) - y_i)\right)$$
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(W,b)(X_i) - y_i))$$
 }
 
-For regularized logistic regression the gradient descent update is the same with linear regression, except for the $$f(X)$$, which is the sigmoid (logistic) function, whereas for linear regression, $$f(X)$$ is a linear function.
+For regularized logistic regression the gradient descent update is the same with linear regression, except for the $f(X)$, which is the sigmoid (logistic) function, whereas for linear regression, $f(X)$ is a linear function.
+
+

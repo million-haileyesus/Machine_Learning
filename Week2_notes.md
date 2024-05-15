@@ -1,46 +1,39 @@
-Multiple features (variables)
+# Multiple features (variables)
 
-f(w,b)(x) = w1x1 + w2x2 + ... + wnxn + b
-W(is a vector, with an arrow) = [w1, w2, ... , wn]
-X(is a vector, with an arrow) = [x1, x2, ... , xn]
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}X_{2} + \cdots + W_{n}X_{n} + b$$
 
-f(w,b)(x) = W *(dot product) X + b => multiple linear regression
+W(is a vector) = [w1, w2, ... , wn]
+X(is a vector) = [x1, x2, ... , xn]
 
-
-
-Numpy python package methods:
-
-w = np.array([1,2,3]) => to put numbers in an array
-x = np.array([0,45,2]) => to put numbers in an array
-
-f = np.dot(w,x) + b => to compute the dot product of vectors
+$$f(W,b)(X) = W \cdot X + b$$ => multiple linear regression
 
 
+# Vector notation for gradient descent
 
-Vector notation for gradient descent
-
-f(W,b)(X) = W *(dot product) X + b
+$$f(W,b)(X) = W \cdot X + b$$
 
 Gradient descent
 
 for loop {
-	w = w - alpha (d/dw) J(W,b)
-	b = b - alpha (d/db) J(W,b)
+$$w = w - &alpha; * \frac{d}{dw} J(w,b)$$
+
+$$b = b - &alpha; * \frac{d}{db} J(w,b)$$
 }
 
 or 
 
 for loop {
-	w of (1) = w of (1) - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i)) * x of (i) => J = 1
-	...
-	w of (n) = w of (n) - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i)) * x of (i) => J = n
+$$w_1 = w_1 - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_i) - y_i) * x_i) => J = 1$$
 
-	b = b - alpha (1/m * sum from i = 1, to m (f(W,b)(X of (i)) - y of (i))
+$$\cdots$$
+
+$$w_n = w_n - &alpha; * (\frac{1}{m} * \sum_{i = 1}^m (f(w,b)(x_i) - y_i) * x_i) => J = n$$
+
+$$b = b - &alpha; * (\frac{1}{m}  * \sum_{i = 1}^m (f(w,b)(x_i) - y_i))$$
 }
 
 
-
-Feature Scaling
+# Feature Scaling
 
 To rescale large or small number, we divide each values by the max value for that 
 feature.
@@ -50,8 +43,7 @@ Example:- -0.00001 < x < 0.001 => rescale it to -0.01 < x < 1
 Example:- -100 < x < 100 => rescale it to -1 < x < 1
 
 
-
-Checking gradient descent for convergence
+# Checking gradient descent for convergence
 
 Making sure graident descent is working correctly means the J(W,b) is being minimized
 after each iteration. When the gradient descent converges it means the curve of the
@@ -63,8 +55,7 @@ decreases by <= e in one iteration, then declare convergence (found parameter W,
 get close to global minimum).
 
 
-
-Choosing the learning rate
+# Choosing the learning rate
 
 If the alpha is too big, the function would diverge. To make sure J(W,b) 
 decrease and don't have a bug in the code, try alpha with smaller number, 
@@ -72,27 +63,27 @@ which would decrease J(W,b) and if it doesn't that means there is a bug
 in your code. 
 
 
+# Feature engineering
 
-Feature engineering
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}X_{2} + b$$
 
-f(W,b)(X) = w1x1 + w2x2 + b
-area = x1 * x2
-x3 = x1 * x2
+$$Area = X_{1} * X_{2}$$
+
+$$X_{3} = X_{1} * X_{2}$$
 
 New feature
 
-f(W,b)(X) = w1x1 + w2x2 + w3x3 + b
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}X_{2} + W_{3}X_{3} + b$$
 
 Feature engineering:- using intuition to design new features, by 
 transforming or combining original features.
 
 
-
-Polynomial regression
+# Polynomial regression
 
 If a curve fits the data model rather than a straight line, we 
 could use a quadratic or cubic lines.
 
-f(W,b)(X) = w1x1 + w2(x2)^2 + b
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}(X_{2})^2 + b$$
 or
-f(W,b)(X) = w1x1 + w2(x2)^2 + w3(x3)^3 + b
+$$f(W,b)(x) = W_{1}X_{1} + W_{2}(X_{2})^2 + W_{3}(X_{3})^3 + b$$
